@@ -23,7 +23,7 @@ func ActionWindows() carapace.Action {
 				return carapace.ActionMessage("windows ids and names differ in amount")
 			}
 
-			vals := make([]string, len(ids)*2)
+			vals := make([]string, 0, len(ids)*2)
 			for index, id := range ids {
 				vals = append(vals, id, names[index])
 			}
